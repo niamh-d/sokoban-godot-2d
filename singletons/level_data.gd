@@ -33,3 +33,6 @@ func load_level_data() -> void:
 	for lns in raw_data.keys():
 		var new_lvl_layout: LevelLayout = setup_level(raw_data[lns])
 		_level_data[lns] = new_lvl_layout
+
+func get_level_data(ln: String) -> LevelLayout:
+	return _level_data[ln]
